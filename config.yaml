@@ -1,6 +1,6 @@
-baseurl: https://datavizm20.classes.andrewheiss.com/
+baseurl: https://introbayesmed20.borishejblum.science/
 defaultContentLanguage: en
-title: "Data Visualization"
+title: "Introduction to Bayesian analysis for medical studies"
 theme: hugo-academic
 
 
@@ -70,4 +70,3 @@ ignoreFiles:
   - _cache$
   - \.Rproj.user$
   - \.Rhistory$
-

@@ -1,6 +1,6 @@
-# Data Visualization with R (PMAP May 2020)
+# Introduction to Bayesian analysis for medical studies
 
-![Data visualization image](static/img/social-image.png)
+Thanks to [Andrew Heiss](https://www.andrewheiss.com/) whose [Datavisualization website class](https://datavizm20.classes.andrewheiss.com) served as template for this website.
 
 ## Theme
 

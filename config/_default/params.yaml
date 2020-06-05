@@ -9,7 +9,7 @@
 #   Latest themes (may require updating): https://sourcethemes.com/academic/themes/
 #   Browse built-in themes in `themes/academic/data/themes/`
 #   Browse user installed themes in `data/themes/`
-theme: "plasma"
+theme: "Blues"
 
 # Enable users to switch between day and night mode?
 day_night: false
@@ -74,7 +74,7 @@ privacy_pack: false
 # Enable visitors to edit pages?
 #   `repo` defines the repository URL. `editable` defines which page types can be edited.
 edit_page:
-  repo_url: 'https://github.com/andrewheiss/datavizm20.classes.andrewheiss.com'
+  repo_url: 'https://github.com/borishejblum/intobayesmed20.classe.borishejblum.science'
   content_dir: ''
   repo_branch: master
   editable:
@@ -89,37 +89,32 @@ edit_page:
 ## Additionally, for organizations, these details may be used to enrich search engine results.
 ############################
 
-author: Andrew Heiss
+author: Boris Hejblum
 
 instructor: 
-  name: Dr. Andrew Heiss
-  email: aheiss@gsu.edu
-  url: "https://www.andrewheiss.com"
-  twitter: andrewheiss
-  github: andrewheiss
-  office: "357 Andrew Young School"
-  contact_policy: >-
-    E-mail and Slack are the best ways to get in contact with me. I will try to respond to all course-related e-mails and Slack messages within 24 hours (*really*), but also remember that life can be busy and chaotic for everyone (including me!), so if I don't respond right away, don't worry!
-  appointment_url: https://calendly.com/andrewheiss/meeting/
+  name: Boris Hejblum
+  email: boris.hejblum@u-bordeaux.fr
+  url: "https://borishejblum.science"
+  twitter: borishej
+  github: borishejblum
 
 course:
-  number: "PMAP 8921"
-  semester: "Maymester 2020"
-  days: "Every day"
-  time: "Whenever"
-  # location: "Online only (thanks, COVID-19, for ruining everything)"
-  dates: "May 11–June 1, 2020"
-  github: "andrewheiss/datavizm20.classes.andrewheiss.com"
+  #number: "PMAP 8921"
+  #semester: "Maymester 2020"
+  #days: "Every day"
+  #time: "Whenever"
+  #location: "Online only (thanks, COVID-19, for ruining everything)"
+  dates: "11, 18 & 25 June 2020"
   copyrightYear: "2020"
-  slack: "https://gsudatavizm2020.slack.com"
+  slack: "https://introbayesmed20.slack.com"
 
 university: 
-  name: Georgia State University
-  url: "https://www.gsu.edu"
+  name: 
+  url: 
 
 school:
-  name: Andrew Young School of Policy Studies
-  url: "https://aysps.gsu.edu/"
+  name: 
+  url: 
 
 
 ############################
@@ -130,7 +125,7 @@ school:
 sharing_image: "social-image.png"
 
 # Twitter username (without @). Used when a visitor shares your site on Twitter.
-twitter: "andrewheiss"
+twitter: "borishej"
 
 
 ############################
@@ -141,7 +136,7 @@ twitter: "andrewheiss"
 #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
 date_format: "January 2, 2006"
 #   Examples: "3:04 pm" or "15:04"
-time_format: "3:04 PM"
+time_format: "15:04"
 
 
 ############################
@@ -213,7 +208,7 @@ search:
   #   0: No search engine
   #   1: Academic (built-in)
   #   2: Algolia (https://www.algolia.com)
-  engine: 0
+  engine: 1
 
   # Configuration of Algolia search engine.
   # Paste the values from your Algolia dashboard.
