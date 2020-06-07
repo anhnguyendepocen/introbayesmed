@@ -103,7 +103,7 @@ swirl()
 
 ## Class chatroom
 
-I have setup a class chatroom on [Slack](https://introbayesmed20.slack.com). this space is intended so that we can have asynchronous communication, but also so that you (students) can communicate with one another.
+I have setup a class chatroom on [Slack](https://introbayesmed20.slack.com). This workspace is intended so that we can have asynchronous communication, but also so that you (students) can be in contact and communicate with one another.
 
 
 ```{r, eval=FALSE, echo=FALSE}
