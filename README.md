@@ -1,6 +1,6 @@
 # Introduction to Bayesian analysis for medical studies
 
-Thanks to [Andrew Heiss](https://www.andrewheiss.com/) whose [Datavisualization website class](https://datavizm20.classes.andrewheiss.com) served as template for this website.
+Thanks to [Andrew Heiss](https://www.andrewheiss.com/) whose [Datavisualization website class](https://datavizm20.classes.andrewheiss.com) served as a template and an inspiration for this website.
 
 ## Theme
 
