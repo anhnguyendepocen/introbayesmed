@@ -1,0 +1,17 @@
+---
+title: "CRM dose-escalation"
+linktitle: "CRM dose-escalation"
+date: "2020-06-25"
+read_date: "2020-06-25"
+menu:
+  content:
+    parent: "Part III: Bayesian Applications in Biomedical sciences"
+    weight: 3
+type: docs
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+slides: "01-slides"
+output:
+  blogdown::html_page:
+    toc: true
+---

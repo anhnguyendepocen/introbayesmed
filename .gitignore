@@ -8,6 +8,6 @@ private/*
 resources/_gen/*
 *.zip
 temp_figs/*
-
+/Cours
 static/slides/*.pdf
 static/example/10-example_files/figure-html/widgets/*
