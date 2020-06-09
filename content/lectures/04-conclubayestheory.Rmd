@@ -16,3 +16,10 @@ output:
     toc: true
 ---
 
+The **slides** for this section are displayed below, and can be downloaded [here](/slides/slidesTheoryConclusion.pdf).
+
+<iframe src="/slides/slidesTheoryConclusion.pdf##view=fit" width="100%" height=450>
+
+This browser does not support PDFs. Please download the PDF to view it: Download PDF
+
+</iframe>
