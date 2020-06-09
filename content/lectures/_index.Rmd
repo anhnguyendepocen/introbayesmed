@@ -24,7 +24,7 @@ For each part, a slides deck is provided and split into video capsules where I p
 
 ### Lectures notes
 
-The **lecture notes** for this course are displayed below, and can be downloaded [here](/files/IntroBayesMed20_lectureNotes.pdf). THose include further technical (notably mathematical) details that are not required to follow along the videos and practical and are being presented for the sake of completeness and for the interested reader.
+The **lecture notes** for this course are displayed below, and can be downloaded [here](/files/IntroBayesMed20_lectureNotes.pdf). Those include further technical details (notably mathematical details) not required to follow along the class, but are being presented for the sake of completeness and for the interested reader.
 
 <iframe src="/files/IntroBayesMed20_lectureNotes.pdf##view=fit" width="100%" height=800>
 
