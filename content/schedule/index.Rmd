@@ -5,10 +5,10 @@ slug: schedule
 
 This online class will span over 3 consecutive Thursdays. This schedule is intended to give you enough time to complete.
 
-- [**Lectures**](/lectures/) (<i class="fas fa-book-reader"></i> <i class="fas fa-chalkboard-teacher"></i>): this page contains the recorded lecture videos, the lecture notes and the slides for this class.
-- [**Practicals**](/practicals/) (<i class="fas fa-laptop-code"></i>): This page contains the practicals corresponding to the topics covered each of the 3 days.
+- [**Lectures**](/lectures/) <i class="fas fa-book-reader"></i> <i class="fas fa-chalkboard-teacher"></i> : this page contains the recorded lecture videos, the lecture notes and the slides for this class.
+- [**Practicals**](/practicals/) <i class="fas fa-laptop-code"></i> : this page contains the practicals code exercise corresponding to the topics covered each of the 3 days.
 
-On both *Tuesday June 16 evening* and *Tuesday June 23 evening*, I ask that you **send me your attempt at solving the practicals** by [email](mailto::boris.hejblum@u-bordeaux.fr) – *before 3pm*. Thus, I will be able to assess your progress, and focus the live sessions on day 2 and day 3 on the potential difficulties you encountered previously.
+On both *Tuesday June 16 3pm* and *Tuesday June 23 3pm*, I ask that you **send me your attempt at solving the practicals** by [email](mailto::boris.hejblum@u-bordeaux.fr) – *before 3pm*. Thus, I will be able to assess your progress, and focus the live sessions on day 2 and day 3 on the potential difficulties you encountered previously.
 
 ---
 

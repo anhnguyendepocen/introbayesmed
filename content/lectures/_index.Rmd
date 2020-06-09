@@ -1,5 +1,5 @@
 ---
-title: Lecture notes
+title: Videos, slides and lecture notes
 menu:
   content:
     parent: Overview
@@ -8,4 +8,26 @@ type: docs
 weight: 1
 ---
 
-Lecture notes:
+### Presentation
+
+This courses is divided into 3 parts:
+
+ 1. [Baysian theory](01-introbayestheory)
+ 2. [Bayesian computation](05-estimateprior)
+ 3. [Bayesian applications in biomedical sciences](09-postmortemreanalysis)
+
+Each part is further divided into 3 or 4 sections, and several videos present the content of the topic in each section.
+
+### Videos & slides
+
+For each part, a slides deck is provided and split into video capsules where I present the slides. Click on the sections on the left hand side menu to access those.
+
+### Lectures notes
+
+The **lecture notes** for this course are displayed below, and can be downloaded [here](/files/IntroBayesMed20_lectureNotes.pdf). THose include further technical (notably mathematical) details that are not required to follow along the videos and practical and are being presented for the sake of completeness and for the interested reader.
+
+<iframe src="/files/IntroBayesMed20_lectureNotes.pdf##view=fit" width="100%" height=800>
+
+This browser does not support PDFs. Please download the PDF to view it: Download PDF
+
+</iframe>
