@@ -23,7 +23,6 @@ output:
 ### Slides
 The **slides** for this section are displayed below, and can be downloaded [here](/slides/slidesForeword.pdf).
 
-<iframe width="420" height="237">
 <html>
 <body>
   <object data="/slides/slidesForeword.pdf##view=fit" type="application/pdf">
@@ -31,4 +30,3 @@ The **slides** for this section are displayed below, and can be downloaded [here
   </object>
 </body>
 </html>
-</iframe>
