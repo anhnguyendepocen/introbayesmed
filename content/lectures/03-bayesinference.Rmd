@@ -15,29 +15,53 @@ output:
   blogdown::html_page:
     toc: true
 ---
+
+### Video lecture
+
+
+#### Bayesian inference part 1
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jFg7iYNFbQw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+#### Bayesian inference part 2
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9QU9OnpgkH4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+#### Bayesian asymptotics
+<iframe width="560" height="315" src="https://www.youtube.com/embed/c0yCMO-TwP0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+### Slides
+
 The **slides** for the first part of this section are displayed below, and can be downloaded [here](/slides/slidesInference.pdf).
 
-<iframe src="/slides/slidesInference.pdf##view=fit" width="100%" height=450>
-
-This browser does not support PDFs. Please download the PDF to view it: Download PDF
-
-</iframe>
+<html>
+<body>
+  <object data="/slides/slidesInference.pdf##view=fit" type="application/pdf" width="420" height="237">
+        <embed src="/slides/slidesInference.pdf##view=fit" type="application/pdf"/>
+  </object>
+</body>
+</html>
 
 
 The **slides** for the second part of this section are displayed below, and can be downloaded [here](/slides/slidesUncertainty.pdf).
 
-<iframe src="/slides/slidesUncertainty.pdf##view=fit" width="100%" height=450>
-
-This browser does not support PDFs. Please download the PDF to view it: Download PDF
-
-</iframe>
+<html>
+<body>
+  <object data="/slides/slidesUncertainty.pdf##view=fit" type="application/pdf" width="420" height="237">
+        <embed src="/slides/slidesUncertainty.pdf##view=fit" type="application/pdf"/>
+  </object>
+</body>
+</html>
 
 
 
 The **slides** for the third part of this section are displayed below, and can be downloaded [here](/slides/slidesAsymptotics.pdf).
 
-<iframe src="/slides/slidesAsymptotics.pdf##view=fit" width="100%" height=450>
-
-This browser does not support PDFs. Please download the PDF to view it: Download PDF
-
-</iframe>
+<html>
+<body>
+  <object data="/slides/slidesAsymptotics.pdf##view=fit" type="application/pdf" width="420" height="237">
+        <embed src="/slides/slidesAsymptotics.pdf##view=fit" type="application/pdf"/>
+  </object>
+</body>
+</html>
