@@ -15,6 +15,17 @@ output:
   blogdown::html_page:
     toc: true
 ---
+### Video lecture
+
+
+#### Introduction part 1
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rn4EPzQmj44" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+#### Introduction part 2
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LRyY37-mB2g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+### Slides
 The **slides** for the first part of this section are displayed below, and can be downloaded [here](/slides/slidesIntro1.pdf).
 
 <iframe src="/slides/slidesIntro1.pdf##view=fit" width="420" height="237">
@@ -25,7 +36,7 @@ This browser does not support PDFs. Please download the PDF to view it: Download
 
 The **slides** for the second part of this section are displayed below, and can be downloaded [here](/slides/slidesIntro2.pdf).
 
-<iframe src="/slides/slidesIntro2.pdf##view=fit" width="420" height="237">
+<iframe src="/slides/slidesIntro2.pdf#10" width="420" height="237">
 
 This browser does not support PDFs. Please download the PDF to view it: Download PDF
 
