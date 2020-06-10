@@ -25,7 +25,7 @@ The **slides** for this section are displayed below, and can be downloaded [here
 
 <html>
 <body>
-  <object data="/slides/slidesForeword.pdf##view=fit" type="application/pdf">
+  <object data="/slides/slidesForeword.pdf##view=fit" type="application/pdf" width="420" height="237">
         <embed src="/slides/slidesForeword.pdf##view=fit" type="application/pdf"/>
   </object>
 </body>
