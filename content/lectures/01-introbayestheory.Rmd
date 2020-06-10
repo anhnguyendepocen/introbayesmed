@@ -17,7 +17,7 @@ output:
 ---
 The **slides** for the first part of this section are displayed below, and can be downloaded [here](/slides/slidesIntro1.pdf).
 
-<iframe src="/slides/slidesIntro1.pdf##view=fit" width="100%" height=450>
+<iframe src="/slides/slidesIntro1.pdf##view=fit" width="420" height="237">
 
 This browser does not support PDFs. Please download the PDF to view it: Download PDF
 
@@ -25,7 +25,7 @@ This browser does not support PDFs. Please download the PDF to view it: Download
 
 The **slides** for the second part of this section are displayed below, and can be downloaded [here](/slides/slidesIntro2.pdf).
 
-<iframe src="/slides/slidesIntro2.pdf##view=fit" width="100%" height=450>
+<iframe src="/slides/slidesIntro2.pdf##view=fit" width="420" height="237">
 
 This browser does not support PDFs. Please download the PDF to view it: Download PDF
 
