@@ -16,22 +16,22 @@ output:
     toc: true
 ---
 
-### Video lecture
+## Video lecture
 
 
-#### Bayesian inference part 1
+### Bayesian inference part 1: point estimates
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jFg7iYNFbQw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-#### Bayesian inference part 2
+### Bayesian inference part 2: uncertainty
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9QU9OnpgkH4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-#### Bayesian asymptotics
+### Bayesian asymptotics
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5b7e4IbixVM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 `r emo::ji("backhand index pointing right")` [*Seeing Theory*, Brown University](http://students.brown.edu/seeing-theory/bayesian-inference/index.html\#section3)
 
-### Slides
+## Slides
 
 The **slides** for the first part of this section are displayed below, and can be downloaded [here](/slides/slidesInference.pdf).
 
@@ -43,7 +43,6 @@ The **slides** for the first part of this section are displayed below, and can b
 </body>
 </html>
 
-
 The **slides** for the second part of this section are displayed below, and can be downloaded [here](/slides/slidesUncertainty.pdf).
 
 <html>
@@ -53,8 +52,6 @@ The **slides** for the second part of this section are displayed below, and can 
   </object>
 </body>
 </html>
-
-
 
 The **slides** for the third part of this section are displayed below, and can be downloaded [here](/slides/slidesAsymptotics.pdf).
 

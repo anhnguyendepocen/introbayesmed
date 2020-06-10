@@ -8,5 +8,7 @@ type: docs
 weight: 1
 ---
 
-### Presentation
+## Presentation
 
+This page contains the `r icon::fa_r_project(colour = "#0085d6")` practicals that illustrate the theoretical concepts from the
+[lectures](/lectures/).

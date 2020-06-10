@@ -16,30 +16,30 @@ output:
     toc: true
 ---
 
-### Video lecture
+## Video lecture
 
 
-#### Bayesian modeling part 1
+### Bayesian modeling part 1
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8Ez-wWMohDg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-#### Bayesian modeling part 2
+### Bayesian modeling part 2
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Wc1bCLNA4Q8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-#### Bayesian modeling part 3
+### Bayesian modeling part 3
 <iframe width="560" height="315" src="https://www.youtube.com/embed/c0yCMO-TwP0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-#### Bayesian modeling – priors
+### Bayesian modeling – priors
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TtGldDmOHcw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 `r emo::ji("backhand index pointing right")` [*Shelf software*](http://www.tonyohagan.co.uk/shelf/)
 
-#### Bayesian modeling – going further
+### Bayesian modeling – going further
 <iframe width="560" height="315" src="https://www.youtube.com/embed/G50sTVCdN_8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-### Slides
+## Slides
 
 The **slides** for the first part of this section are displayed below, and can be downloaded [here](/slides/slidesModel1.pdf).
 
@@ -62,9 +62,6 @@ The **slides** for the second part of this section are displayed below, and can 
 </body>
 </html>
 
-
-
-
 The **slides** for the third part of this section are displayed below, and can be downloaded [here](/slides/slidesModel3.pdf).
 
 <html>
@@ -75,8 +72,6 @@ The **slides** for the third part of this section are displayed below, and can b
 </body>
 </html>
 
-
-
 The **slides** for the fourth part of this section are displayed below, and can be downloaded [here](/slides/slidesPriors.pdf).
 
 <html>
@@ -86,8 +81,6 @@ The **slides** for the fourth part of this section are displayed below, and can 
   </object>
 </body>
 </html>
-
-
 
 The **slides** for the fifth part of this section are displayed below, and can be downloaded [here](/slides/slidesGoingFurther.pdf).
 

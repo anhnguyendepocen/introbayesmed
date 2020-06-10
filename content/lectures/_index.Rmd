@@ -28,8 +28,8 @@ The **lecture notes** for this course are displayed below, and can be downloaded
 
 <html>
 <body>
-  <object data="/slides/IntroBayesMed20_lectureNotes.pdf##view=fit" type="application/pdf" width="100%" height="800">
-        <embed src="/slides/IntroBayesMed20_lectureNotes.pdf##view=fit" type="application/pdf"/>
+  <object data="/files/IntroBayesMed20_lectureNotes.pdf##view=fit" type="application/pdf" width="100%" height="900">
+        <embed src="/files/IntroBayesMed20_lectureNotes.pdf##view=fit" type="application/pdf"/>
   </object>
 </body>
 </html>
