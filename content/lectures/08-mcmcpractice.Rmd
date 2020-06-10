@@ -4,7 +4,7 @@ linktitle: "MCMC in Practice"
 date: "2020-06-18"
 read_date: "2020-06-18"
 menu:
-  content:
+  lectures:
     parent: "Part II: Bayesian Computation"
     weight: 4
 type: docs
@@ -15,3 +15,29 @@ output:
   blogdown::html_page:
     toc: true
 ---
+The **slides** for the first part of this section are displayed below, and can be downloaded [here](/slides/slidesMCMCsoftware.pdf).
+
+<iframe src="/slides/slidesMCMCsoftware.pdf##view=fit" width="100%" height=450>
+
+This browser does not support PDFs. Please download the PDF to view it: Download PDF
+
+</iframe>
+
+
+The **slides** for the second part of this section are displayed below, and can be downloaded [here](/slides/slidesMCMCconvergence.pdf).
+
+<iframe src="/slides/slidesMCMCconvergence.pdf##view=fit" width="100%" height=450>
+
+This browser does not support PDFs. Please download the PDF to view it: Download PDF
+
+</iframe>
+
+
+
+The **slides** for the third part of this section are displayed below, and can be downloaded [here](/slides/slidesMCMCinference.pdf).
+
+<iframe src="/slides/slidesMCMCinference.pdf##view=fit" width="100%" height=450>
+
+This browser does not support PDFs. Please download the PDF to view it: Download PDF
+
+</iframe>

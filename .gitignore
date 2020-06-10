@@ -11,3 +11,4 @@ temp_figs/*
 /Cours
 static/slides/*.pdf
 static/example/10-example_files/figure-html/widgets/*
+/content/practicals/0*.Rmd

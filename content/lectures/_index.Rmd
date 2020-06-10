@@ -1,7 +1,7 @@
 ---
 title: Videos, slides and lecture notes
 menu:
-  content:
+  lectures:
     parent: Overview
     weight: 1
 type: docs

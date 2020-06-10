@@ -4,7 +4,7 @@ linktitle: "CRM dose-escalation"
 date: "2020-06-25"
 read_date: "2020-06-25"
 menu:
-  content:
+  lectures:
     parent: "Part III: Bayesian Applications in Biomedical sciences"
     weight: 3
 type: docs

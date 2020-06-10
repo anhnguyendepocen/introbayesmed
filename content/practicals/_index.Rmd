@@ -1,0 +1,12 @@
+---
+title: R & JAGS practicals
+menu:
+  practicals:
+    parent: Overview
+    weight: 1
+type: docs
+weight: 1
+---
+
+### Presentation
+

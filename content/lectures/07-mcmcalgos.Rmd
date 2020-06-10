@@ -4,7 +4,7 @@ linktitle: "MCMC algorithms"
 date: "2020-06-18"
 read_date: "2020-06-18"
 menu:
-  content:
+  lectures:
     parent: "Part II: Bayesian Computation"
     weight: 3
 type: docs
@@ -15,3 +15,29 @@ output:
   blogdown::html_page:
     toc: true
 ---
+The **slides** for the first part of this section are displayed below, and can be downloaded [here](/slides/slidesMCMCMarkovChains.pdf).
+
+<iframe src="/slides/slidesMCMCMarkovChains.pdf##view=fit" width="100%" height=450>
+
+This browser does not support PDFs. Please download the PDF to view it: Download PDF
+
+</iframe>
+
+
+The **slides** for the second part of this section are displayed below, and can be downloaded [here](/slides/slidesMCMCgeneral.pdf).
+
+<iframe src="/slides/slidesMCMCgeneral.pdf##view=fit" width="100%" height=450>
+
+This browser does not support PDFs. Please download the PDF to view it: Download PDF
+
+</iframe>
+
+
+
+The **slides** for the third part of this section are displayed below, and can be downloaded [here](/slides/slidesMCMCMHGibbs.pdf).
+
+<iframe src="/slides/slidesMCMCMHGibbs.pdf##view=fit" width="100%" height=450>
+
+This browser does not support PDFs. Please download the PDF to view it: Download PDF
+
+</iframe>
