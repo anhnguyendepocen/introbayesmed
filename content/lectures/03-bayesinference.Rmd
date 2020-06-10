@@ -27,9 +27,9 @@ output:
 
 
 #### Bayesian asymptotics
-<iframe width="560" height="315" src="https://www.youtube.com/embed/c0yCMO-TwP0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5b7e4IbixVM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
+`r emo::ji("backhand index pointing right")` [*Seeing Theory*, Brown University](http://students.brown.edu/seeing-theory/bayesian-inference/index.html\#section3)
 
 ### Slides
 

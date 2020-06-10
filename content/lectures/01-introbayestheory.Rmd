@@ -21,6 +21,8 @@ output:
 #### Introduction part 1
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rn4EPzQmj44" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+`r emo::ji("backhand index pointing right")` [*Seeing Theory*, Brown University](http://students.brown.edu/seeing-theory/bayesian-inference/index.html\#section1)
+
 #### Introduction part 2
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LRyY37-mB2g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
