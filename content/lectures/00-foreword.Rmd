@@ -23,8 +23,6 @@ output:
 ### Slides
 The **slides** for this section are displayed below, and can be downloaded [here](/slides/slidesForeword.pdf).
 
-<iframe src="/slides/slidesForeword.pdf##view=fit" width="420" height="237">
-
-This browser does not support PDFs. Please download the PDF to view it: Download PDF
-
-</iframe>
+<object data="/slides/slidesForeword.pdf##view=fit" type="application/pdf" width="420" height="237">
+        <embed src="/slides/slidesForeword.pdf##view=fit" type="application/pdf"  width="420" height="237"/>
+</object>
