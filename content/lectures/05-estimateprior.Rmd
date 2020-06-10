@@ -5,7 +5,7 @@ date: "2020-06-11"
 read_date: "2020-06-11"
 menu:
   lectures:
-    parent: "Part II: Bayesian Computation"
+    parent: "Part II: Bayesian computation"
     weight: 1
 type: docs
 bibliography: "../../static/bib/references.bib"

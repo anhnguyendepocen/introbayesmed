@@ -11,3 +11,5 @@ temp_figs/*
 /Cours
 static/example/10-example_files/figure-html/widgets/*
 /content/practicals/0*.Rmd
+/blogdown
+*.Rproj

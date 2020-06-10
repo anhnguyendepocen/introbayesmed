@@ -1,11 +1,11 @@
 ---
-title: "Bayesian Modeling"
-linktitle: "Bayesian Modeling"
+title: "Bayesian modeling"
+linktitle: "Bayesian modeling"
 date: "2020-06-11"
 read_date: "2020-06-11"
 menu:
   lectures:
-    parent: "Part I: Bayesian Theory"
+    parent: "Part I: Bayesian theory"
     weight: 2
 type: docs
 bibliography: "../../static/bib/references.bib"

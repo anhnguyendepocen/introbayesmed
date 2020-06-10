@@ -5,7 +5,7 @@ date: "2020-06-25"
 read_date: "2020-06-25"
 menu:
   lectures:
-    parent: "Part III: Bayesian Applications in Biomedical sciences"
+    parent: "Part III: Bayesian applications in biomedical sciences"
     weight: 2
 type: docs
 bibliography: "../../static/bib/references.bib"
