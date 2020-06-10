@@ -33,7 +33,7 @@ output:
 #### Bayesian modeling – priors
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TtGldDmOHcw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-`r emo::ji("backhand index pointing right")` [*Shelf software*](http://www.tonyohagan.co.ik/shelf/)
+`r emo::ji("backhand index pointing right")` [*Shelf software*](http://www.tonyohagan.co.uk/shelf/)
 
 #### Bayesian modeling – going further
 <iframe width="560" height="315" src="https://www.youtube.com/embed/G50sTVCdN_8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
