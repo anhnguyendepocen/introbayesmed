@@ -23,6 +23,12 @@ output:
 ### Slides
 The **slides** for this section are displayed below, and can be downloaded [here](/slides/slidesForeword.pdf).
 
-<object data="/slides/slidesForeword.pdf##view=fit" type="application/pdf" width="420" height="237">
-        <embed src="/slides/slidesForeword.pdf##view=fit" type="application/pdf"  width="420" height="237"/>
-</object>
+<iframe width="420" height="237">
+<html>
+<body>
+  <object data="/slides/slidesForeword.pdf##view=fit" type="application/pdf">
+        <embed src="/slides/slidesForeword.pdf##view=fit" type="application/pdf"/>
+  </object>
+</body>
+</html>
+</iframe>
