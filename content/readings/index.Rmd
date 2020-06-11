@@ -54,6 +54,6 @@ You can dowload the *.pdf* file by clicking on the `r emo::ji("newspaper")` imag
 
 [`r emo::ji("newspaper")`](/static/readings/Serghiou2019JAMA.pdf) [@serghiou2019RandomEffects]
 
-### CRM
+### Continuous Reassessment Methods (CRM) for dose finding
 
 [`r emo::ji("newspaper")`](/static/readings/Kaguelidou2016_PlosOne.pdf) [@kaguelidou2016DoseFinding]

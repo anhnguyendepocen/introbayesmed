@@ -15,3 +15,5 @@ output:
   blogdown::html_page:
     toc: true
 ---
+
+ `r emo::ji("backhand index pointing right")` [Interactive `bayesmeta` webApp](http://ams.med.uni-goettingen.de:3838/bayesmeta/app/)
