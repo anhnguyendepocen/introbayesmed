@@ -19,7 +19,7 @@ You can dowload the *.pdf* file by clicking on the `r emo::ji("newspaper")` imag
 
 [`r emo::ji("newspaper")`](/static/readings/Puga2015BayesianStats.pdf) [@puga2015BayesianStat]
 
-[`r emo::ji("newspaper")`](/static/readings/mcglothlin2018JAMA.pdf)[@mcglothlin2018Bayesian]
+[`r emo::ji("newspaper")`](/static/readings/mcglothlin2018JAMA.pdf) [@mcglothlin2018Bayesian]
 
 [`r emo::ji("newspaper")`](/static/readings/Grewal2015Markov.pdf) [@grewal2019Markov]
 
