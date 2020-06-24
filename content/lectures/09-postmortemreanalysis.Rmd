@@ -9,7 +9,7 @@ menu:
     weight: 1
 type: docs
 bibliography: "../../static/bib/references.bib"
-csl: ../../static/bib/chicago-syllabus-no-bib.csl
+csl: "../../static/bib/chicago-syllabus-no-bib.csl"
 slides: "01-slides"
 output:
   blogdown::html_page:
@@ -19,10 +19,10 @@ output:
 ## Video lectures
 
 ### Biomedical applications introduction
-<iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6c3W_fOMnmE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Post-mortem re-analysis of the EOLIA clinical trial
-<iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HyUp_0neOAQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 [`r emo::ji("newspaper")`](/readings/Goligher2018JAMA.pdf) [@goligher2018Extracorporeal]
 

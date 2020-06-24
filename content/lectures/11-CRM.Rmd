@@ -19,7 +19,7 @@ output:
 ## Video lecture
 
 ### Continuous Reassessment Method in dose-escalation clinical trials
-<iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/25q4DbuB6EU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 [`r emo::ji("newspaper")`](/readings/Kaguelidou2016_PlosOne.pdf) [@kaguelidou2016DoseFinding]
 
