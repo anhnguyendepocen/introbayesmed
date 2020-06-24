@@ -36,8 +36,10 @@ On *Tuesday June 23 3pm*, I ask that you **send me your attempt at solving the p
 |                | 10:15am-10:30am  | `r emo::ji("pause_button")` Break                                                                                 |                                         |
 |                | 10:30am-11:30am | `r emo::ji("video_camera")` `r emo::ji("man_technologist")` `r emo::ji("question")` Live zoom Q&A                 | Questions & explanations about part III |
 |                | 11:30am-12:15pm | `r emo::ji("sandwich")` Lunch break                                                                               |                                         |
-|                | 12:15pm- 2pm    | `r emo::ji("computer")` Practicals on you own                                                                     | • Exercise 5: "Post-mortem Bayes" <br> • Exercise 6: "Bayesian meta-analysis" <br> • Exercise 7: "How not to report a CRM" |
-|                | 2pm-2:15pm  | `r emo::ji("pause_button")` Break                                                                                 |                                         |
+|                | 12:15pm- 1pm    | `r emo::ji("computer")` Practicals on you own                                                                     | • Exercise 5: "Post-mortem Bayes" <br> • Exercise 6: "Bayesian meta-analysis" <br> • Exercise 7: "How not to report a CRM" |
+|                | 1pm-1:15pm   | `r emo::ji("pause_button")` Break                                                                                 |                                         |
+|                | 1:15pm-2pm      | `r emo::ji("computer")` `r emo::ji("video_camera")` Practicals in break out rooms on zoom            |• Exercise 5: "Post-mortem Bayes" <br> • Exercise 6: "Bayesian meta-analysis" <br> • Exercise 7: "How not to report a CRM"  |
+|                | 2pm-2:15pm   | `r emo::ji("pause_button")` Break                                                                                 |                                         |
 |                | 2:15pm-3pm      | `r emo::ji("video_camera")` `r emo::ji("man_technologist")` `r emo::ji("question")` Correction of practicals 3    | • Exercise 5: "Post-mortem Bayes" <br> • Exercise 6: "Bayesian meta-analysis" <br> • Exercise 7: "How not to report a CRM" |    
 
 ---
