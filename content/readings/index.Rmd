@@ -15,15 +15,15 @@ You can dowload the *.pdf* file by clicking on the `r emo::ji("newspaper")` imag
 
 ## Primers on Bayesian methods for biomedical scientists
 
-[`r emo::ji("newspaper")`](/static/readings/Puga2015BayesTheorem.pdf) [@puga2015BayesTheorem]
+[`r emo::ji("newspaper")`](/readings/Puga2015BayesTheorem.pdf) [@puga2015BayesTheorem]
 
-[`r emo::ji("newspaper")`](/static/readings/Puga2015BayesianStats.pdf) [@puga2015BayesianStat]
+[`r emo::ji("newspaper")`](/readings/Puga2015BayesianStats.pdf) [@puga2015BayesianStat]
 
-[`r emo::ji("newspaper")`](/static/readings/mcglothlin2018JAMA.pdf) [@mcglothlin2018Bayesian]
+[`r emo::ji("newspaper")`](/readings/mcglothlin2018JAMA.pdf) [@mcglothlin2018Bayesian]
 
-[`r emo::ji("newspaper")`](/static/readings/Grewal2015Markov.pdf) [@grewal2019Markov]
+[`r emo::ji("newspaper")`](/readings/Grewal2015Markov.pdf) [@grewal2019Markov]
 
-[`r emo::ji("newspaper")`](/static/readings/Eddy2004NatureBiotech.pdf) [@eddy2004What]
+[`r emo::ji("newspaper")`](/readings/Eddy2004NatureBiotech.pdf) [@eddy2004What]
 
 ## Bayesian analysis in medical litterature
 
@@ -31,29 +31,29 @@ You can dowload the *.pdf* file by clicking on the `r emo::ji("newspaper")` imag
 
 #### Original study
 
-[`r emo::ji("newspaper")`](/static/readings/Combes2018NEJM.pdf) [@combes2018Extracorporeal] 
+[`r emo::ji("newspaper")`](/readings/Combes2018NEJM.pdf) [@combes2018Extracorporeal] 
 
 #### Bayesian reanalysis
 
-[`r emo::ji("newspaper")`](/static/readings/Goligher2018JAMA.pdf) [@goligher2018Extracorporeal]
+[`r emo::ji("newspaper")`](/readings/Goligher2018JAMA.pdf) [@goligher2018Extracorporeal]
 
 #### Comment & response
 
-[`r emo::ji("newspaper")`](/static/readings/Lewis2018JAMA.pdf) [@lewis2018Time]
+[`r emo::ji("newspaper")`](/readings/Lewis2018JAMA.pdf) [@lewis2018Time]
 
-[`r emo::ji("newspaper")`](/static/readings/CommentGoligher2018JAMA.pdf) [@aberegg2018Post] [@ferreira2018Post] [@goligher2018Post]
+[`r emo::ji("newspaper")`](/readings/CommentGoligher2018JAMA.pdf) [@aberegg2018Post] [@ferreira2018Post] [@goligher2018Post]
 
 
 ### Bayesian meta-analysis
 
-[`r emo::ji("newspaper")`](/static/readings/rover2017Bayesmeta.pdf) [@rover2017bayesmeta]
+[`r emo::ji("newspaper")`](/readings/rover2017Bayesmeta.pdf) [@rover2017bayesmeta]
 
-[`r emo::ji("newspaper")`](/static/readings/Crins2014IIL2.pdf) [@crins2014Interleukin2]
+[`r emo::ji("newspaper")`](/readings/Crins2014IIL2.pdf) [@crins2014Interleukin2]
 
-[`r emo::ji("newspaper")`](/static/readings/arya2020JAMA.pdf) [@arya2020Practical]
+[`r emo::ji("newspaper")`](/readings/arya2020JAMA.pdf) [@arya2020Practical]
 
-[`r emo::ji("newspaper")`](/static/readings/Serghiou2019JAMA.pdf) [@serghiou2019RandomEffects]
+[`r emo::ji("newspaper")`](/readings/Serghiou2019JAMA.pdf) [@serghiou2019RandomEffects]
 
 ### Continuous Reassessment Methods (CRM) for dose finding
 
-[`r emo::ji("newspaper")`](/static/readings/Kaguelidou2016_PlosOne.pdf) [@kaguelidou2016DoseFinding]
+[`r emo::ji("newspaper")`](/readings/Kaguelidou2016_PlosOne.pdf) [@kaguelidou2016DoseFinding]
