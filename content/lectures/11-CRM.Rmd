@@ -15,3 +15,23 @@ output:
   blogdown::html_page:
     toc: true
 ---
+
+## Video lecture
+
+### Continuous Reassessment Method in dose-escalation clinical trials
+<iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[`r emo::ji("newspaper")`](/readings/Kaguelidou2016_PlosOne.pdf) [@kaguelidou2016DoseFinding]
+
+
+## Slides
+
+The **slides** for this section are displayed below, and can be downloaded [here](/slides/slidesAppCRM.pdf).
+
+<html>
+<body>
+  <object data="/slides/slidesAppCRM.pdf##view=fit" type="application/pdf" width="420" height="237">
+        <embed src="/slides/slidesAppCRM.pdf##view=fit" type="application/pdf"/>
+  </object>
+</body>
+</html>

@@ -9,9 +9,41 @@ menu:
     weight: 1
 type: docs
 bibliography: "../../static/bib/references.bib"
-csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+csl: ../../static/bib/chicago-syllabus-no-bib.csl
 slides: "01-slides"
 output:
   blogdown::html_page:
     toc: true
 ---
+
+## Video lectures
+
+### Biomedical applications introduction
+<iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Post-mortem re-analysis of the EOLIA clinical trial
+<iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[`r emo::ji("newspaper")`](/readings/Goligher2018JAMA.pdf) [@goligher2018Extracorporeal]
+
+## Slides
+
+The **slides** for the first part of this section are displayed below, and can be downloaded [here](/slides/slidesAppIntro.pdf).
+
+<html>
+<body>
+  <object data="/slides/slidesAppIntro.pdf##view=fit" type="application/pdf" width="420" height="237">
+        <embed src="/slides/slidesAppIntro.pdf##view=fit" type="application/pdf"/>
+  </object>
+</body>
+</html>
+
+The **slides** for the second part of this section are displayed below, and can be downloaded [here](/slides/slidesAppEOLIA.pdf).
+
+<html>
+<body>
+  <object data="/slides/slidesAppEOLIA.pdf##view=fit" type="application/pdf" width="420" height="237">
+        <embed src="/slides/slidesAppEOLIA.pdf##view=fit" type="application/pdf"/>
+  </object>
+</body>
+</html>

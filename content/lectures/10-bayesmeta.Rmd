@@ -16,4 +16,27 @@ output:
     toc: true
 ---
 
- `r emo::ji("backhand index pointing right")` [Interactive `bayesmeta` webApp](http://ams.med.uni-goettingen.de:3838/bayesmeta/app/)
+## Video lecture
+
+### Bayesain meta-analysis
+<iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+`r emo::ji("backhand index pointing right")` [Interactive `bayesmeta` webApp](http://ams.med.uni-goettingen.de:3838/bayesmeta/app/)
+
+[`r emo::ji("newspaper")`](/readings/Crins2014IIL2.pdf) [@crins2014Interleukin2]
+
+[`r emo::ji("newspaper")`](/readings/rover2017Bayesmeta.pdf) [@rover2017bayesmeta]
+
+
+## Slides
+
+The **slides** for this section are displayed below, and can be downloaded [here](/slides/slidesAppMeta.pdf).
+
+<html>
+<body>
+  <object data="/slides/slidesAppMeta.pdf##view=fit" type="application/pdf" width="420" height="237">
+        <embed src="/slides/slidesAppMeta.pdf##view=fit" type="application/pdf"/>
+  </object>
+</body>
+</html>
+
