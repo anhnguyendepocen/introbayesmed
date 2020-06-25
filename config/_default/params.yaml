@@ -37,7 +37,7 @@ font_size: "L"
 site_type: "Course"
 
 # Description for social sharing and search engines. If undefined, superuser role is used in place.
-description: "Communicate science and statistics with beautiful graphics made with R and ggplot2"
+description: "Undeerstand Bayesian methods and their assumptions in reported biomedical studies"
 
 # Display a logo in navigation bar rather than title (optional).
 #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
@@ -122,7 +122,7 @@ school:
 ############################
 
 # Default image for social sharing and search engines. Place image in `static/img/` folder and specify image name here.
-sharing_image: "social-image.png"
+sharing_image: "introbayesmed_hires.png"
 
 # Twitter username (without @). Used when a visitor shares your site on Twitter.
 twitter: "borishej"
