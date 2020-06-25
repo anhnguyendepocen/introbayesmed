@@ -21,8 +21,8 @@ An R script with all the codes run in the above document can be downladed [here]
 
 <html>
 <body>
-  <object data="/files/AllSols.pdf##view=fit" type="application/pdf" width="100%" height="900">
-        <embed src="/files/AllSols.pdf##view=fit" type="application/pdf"/>
+  <object data="/files/PracticalsSolutions.pdf##view=fit" type="application/pdf" width="100%" height="900">
+        <embed src="/files/PracticalsSolutions.pdf##view=fit" type="application/pdf"/>
   </object>
 </body>
 </html>
