@@ -37,7 +37,7 @@ font_size: "L"
 site_type: "Course"
 
 # Description for social sharing and search engines. If undefined, superuser role is used in place.
-description: "Undeerstand Bayesian methods and their assumptions in reported biomedical studies"
+description: "Understand Bayesian methods and their assumptions in reported biomedical studies"
 
 # Display a logo in navigation bar rather than title (optional).
 #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
