@@ -13,6 +13,7 @@ weight: 1
 This page contains the `r icon::fa_r_project(colour = "#0085d6")` practicals that illustrate the theoretical concepts from the
 [lectures](/lectures/).
 
+<!--
 ## Solutions
 
 The **solutions** for the seven practical exercises of this course are displayed below, and can be downloaded [here](/files/PracticalsSolutions.pdf).
@@ -26,3 +27,4 @@ An R script with all the codes run in the above document can be downladed [here]
   </object>
 </body>
 </html>
+-->

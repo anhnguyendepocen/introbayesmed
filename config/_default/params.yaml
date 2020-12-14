@@ -74,8 +74,8 @@ privacy_pack: false
 # Enable visitors to edit pages?
 #   `repo` defines the repository URL. `editable` defines which page types can be edited.
 edit_page:
-  repo_url: 'https://github.com/borishejblum/intobayesmed20.classe.borishejblum.science'
-  content_dir: ''
+  repo_url: 'https://github.com/borishejblum/introbayesmed'
+  content_dir: 'content'
   repo_branch: master
   editable:
     docs: true
@@ -107,6 +107,7 @@ course:
   dates: "11, 18 & 25 June 2020"
   copyrightYear: "2020"
   slack: "https://introbayesmed20.slack.com"
+  github: "borishejblum/introbayesmed"
 
 university: 
   name: 
