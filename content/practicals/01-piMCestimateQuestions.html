@@ -1,0 +1,71 @@
+---
+title: "Exercise 1: Monte-Carlo"
+linktitle: "Exercise 1: Monte-Carlo"
+date: "2020-06-11"
+read_date: "2020-06-11"
+menu:
+  practicals:
+    parent: "Practicals"
+    weight: 1
+type: docs
+output:
+  blogdown::html_page:
+    toc: false
+    number_sections: false
+bibliography: "../../static/bib/references.bib"
+---
+
+
+
+<ol style="list-style-type: decimal">
+<li><p>Create a Monte Carlo sample of size <span class="math inline">\(50\)</span> from a Gaussian distribution with mean <span class="math inline">\(m=2\)</span> and standard deviation <span class="math inline">\(s=3\)</span>. Compute Monte Carlo estimates of both the mean and the standard-deviation on this <span class="math inline">\(50\)</span>-sample. Then create a sample of size <span class="math inline">\(20\,000\)</span> and compute again such estimates on this <span class="math inline">\(20\,000\)</span>-sample. What do you notice ? Which famous theoretical property is illustrated here ?</p></li>
+<li><p>Let’s now program a Monte-Carlo estimate of <span class="math inline">\(\pi\approx 3,1416\)</span></p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Program a function <code>roulette_coord</code> which has only one argument <code>ngrid</code> (representing the number of different outcomes possible on the <em>roulette</em> used) whose default is <code>35</code>, generating the two coordinates of a point (between <span class="math inline">\(0\)</span> and <span class="math inline">\(35\)</span>) as a vector. Use the <code>R</code> function <code>sample</code> (whhose help page is accessible through the command <code>?sample</code>). The function will return the vector of the 2 coordinates <code>x</code> and <code>y</code> generated this way.</p></li>
+<li><p>Thanks to the formula to compute the distance bewteen 2 points: <span class="math inline">\(d = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}\)</span>, program a function computing the distance to the origin (here has coordinates <span class="math inline">\((\frac{ngrid}{2}, \frac{ngrid}{2})\)</span>) that checks if the computed distance is less than the unit disk radius (<span class="math inline">\(R = \frac{ngrid}{2}\)</span>). This function, called for instance <code>inside_disk_fun()</code>, will have 2 arguments: the vector <code>p</code> containing the coordinates of the points on the one hand, and the integer <code>ngrid</code> on the other hand. It will return a boolean value (<code>TRUE</code>or <code>FALSE</code>) indicating the point is inside the disk.</p></li>
+<li><p>The surface ratio between the disk (radius <span class="math inline">\(\frac{ngrid}{2}\)</span>) and the square (side length <span class="math inline">\(ngrid\)</span>) is equal to <span class="math inline">\(\frac{\pi}{4}\)</span>, i.e. the probability of sampling a point the disk rather than outside is <span class="math inline">\(\frac{\pi}{4}\)</span>. Now, using this result, program a function to compute a Monte Carlo estimate of <span class="math inline">\(pi\)</span> from a boolean vector of size <span class="math inline">\(n\)</span> (the number of sampled points), which is <code>TRUE</code> if the point is indeed inside the disk and <code>FALSE</code> otherwise.</p></li>
+<li><p>Using the code below, generate 200 points and plot the data generated. What is the corresponding Monte Carlo estimate of <span class="math inline">\(\pi\)</span> ? Change <code>npoints</code> and comment. How could the estimation be improved (<em>ProTip</em>: try <code>ngrid &lt;- 1000</code> and <code>npoints &lt;- 5000</code>) ?</p>
+<pre class="r"><code># Grid size (resolution)
+ngrid &lt;- 35
+
+# Monte Carlo sample size
+npoints &lt;- 200
+
+# Points generation
+pp &lt;- matrix(NA, ncol = 2, nrow = npoints)
+for (i in 1:nrow(pp)) {
+    pp[i, ] &lt;- roulette_coord(ngrid)
+}
+
+# Estimate pi
+in_disk &lt;- apply(X = pp, MARGIN = 1, FUN = inside_disk_fun, ngrid = ngrid)
+piMC(in_disk)
+
+# Plot first we initialise an empty plot with the right size using argument
+plot(x = pp[, 1], y = pp[, 2], xlim = c(0, ngrid), ylim = c(0, ngrid), axes = 0, 
+    xlab = &quot;x&quot;, ylab = &quot;y&quot;, type = &quot;n&quot;)
+## we tick the x and then y axes from 1 to ngrid
+axis(1, at = c(0:ngrid))
+axis(2, at = c(0:ngrid))
+## we add a square around the plot
+box()
+## we plot the grid (using dotted lines thanks to the argument `lty = 3`) onto
+## which the points are sample
+for (i in 0:ngrid) {
+    abline(h = i, lty = 3)
+    abline(v = i, lty = 3)
+}
+## we add the sampled points
+lines(x = pp[, 1], y = pp[, 2], xlim = c(0, ngrid), ylim = c(0, ngrid), xlab = &quot;x&quot;, 
+    ylab = &quot;y&quot;, type = &quot;p&quot;, pch = 16)
+## we add the circle display
+x.cercle &lt;- seq(0, ngrid, by = 0.1)
+y.cercle &lt;- sqrt((ngrid/2)^2 - (x.cercle - ngrid/2)^2)
+lines(x.cercle, y = y.cercle + ngrid/2, col = &quot;red&quot;)
+lines(x.cercle, y = -y.cercle + ngrid/2, col = &quot;red&quot;)
+## finally we color in red the points sampled inside the disk
+lines(x = pp[in_disk, 1], y = pp[in_disk, 2], xlim = c(0, ngrid), ylim = c(0, ngrid), 
+    xlab = &quot;x&quot;, ylab = &quot;y&quot;, type = &quot;p&quot;, pch = 16, col = &quot;red&quot;, cex = 0.7)</code></pre>
+<p><img src="/practicals/01-piMCestimateQuestions_files/figure-html/MC2-plot-1.png" width="576" /></p></li>
+</ol></li>
+</ol>

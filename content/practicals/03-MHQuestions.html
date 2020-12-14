@@ -1,0 +1,67 @@
+---
+title: "Exercise 3: Metropolis-Hastings algorithm(s) for the historical application (Beta-Bernoulli model)"
+linktitle: "Exercise 3: Metropolis-Hastings algorithm(s) for the historical application (Beta-Bernoulli model)"
+date: "2020-06-18"
+read_date: "2020-06-18"
+menu:
+  practicals:
+    parent: "Practicals"
+    weight: 3
+type: docs
+output:
+  blogdown::html_page:
+    toc: false
+    number_sections: false
+bibliography: "../../static/bib/references.bib"
+---
+
+
+
+<p>Using the historical example, program an independant Metropolis-Hastings algorithm to estimate the <em>posterior</em> distribution of parameter<span class="math inline">\(\theta\)</span> (i.e. the probability of having a girl for a birth). The <em>prior</em> distribution on <span class="math inline">\(\theta\)</span> will be used as the instrumental proposal, and we will start by using a uniform <em>prior</em> on <span class="math inline">\(\theta\)</span>. We will consider the <span class="math inline">\(493,472\)</span> births observed in Parisbetween 1745 and 1770, of which <span class="math inline">\(241,945\)</span> were girls.</p>
+<ol style="list-style-type: decimal">
+<li><p>Program a function that computes the numerator of the <em>posterior</em> density, which can be written <span class="math inline">\(p(\theta|n,S)\propto\theta^S(1-\theta)^{n-S}\)</span> with <span class="math inline">\(S = 241\,945\)</span> and <span class="math inline">\(n = 493\,472\)</span> (plan for a boolean argument that will allow to return — or not — the logarithm of the <em>posterior</em> instead).</p>
+<pre class="r"><code>post_num_hist &lt;- function(theta, log = FALSE) {
+
+    n &lt;- 493472  # the data
+    S &lt;- 241945  # the data
+
+    if (log) {
+        num &lt;- S * log(theta) + (n - S) * log(1 - theta)  # the **log** numerator of the posterior
+    } else {
+        num &lt;- theta^S * (1 - theta)^(n - S)  # the numerator of the posterior
+    }
+    return(num)  # the output of the function
+}
+
+post_num_hist(0.2, log = TRUE)</code></pre>
+<pre><code>## [1] -445522.1</code></pre>
+<pre class="r"><code>post_num_hist(0.6, log = TRUE)</code></pre>
+<pre><code>## [1] -354063.6</code></pre></li>
+<li><p>Program the corresponding Metropolis-Hastings algorithm, returning a vector of size <span class="math inline">\(n\)</span> sampled according to the <em>posterior</em> distribution. Also returns the vector of acceptance probabilities <span class="math inline">\(\alpha\)</span>. What happens if this acceptance probability is <strong><em>NOT</em></strong> computed on the <span class="math inline">\(log\)</span> scale ?</p>
+<pre class="r"><code>myMH &lt;- function(niter, post_num) {
+    x_save &lt;- numeric(length = niter)  #create a vector of 0s of length niter to store the sampled values
+    alpha &lt;- numeric(length = niter)  #create a vector of 0s of length niter to store the acceptance probabilities
+    # initialise x0
+    x &lt;- runif(n = 1, min = 0, max = 1)
+    # accpetance-rejection loop
+    for (t in 1:niter) {
+        # sample y from the proposal (here uniform prior)
+        y &lt;- runif(n = 1, min = 0, max = 1)
+        # compute the acceptance-rejection probability
+        alpha[t] &lt;- min(1, exp(post_num(y, log = TRUE) - post_num(x, log = TRUE)))
+        # accept or reject
+        u &lt;- runif(1)
+        if (u &lt;= alpha[t]) {
+            x_save[t] &lt;- y
+        } else {
+            x_save[t] &lt;- x
+        }
+        # update the current value
+        x &lt;- x_save[t]
+    }
+    return(list(theta = x_save, alpha = alpha))
+}</code></pre></li>
+<li><p>Compare the <em>posterior</em> density obtained with this Metropolis-Hastings algorithm over 2000 itérations to the theoretical one (the theoretical density can be obtained with the <code>R</code> fuction <code>dbeta(x, 241945 + 1, 251527 + 1)</code> and represented with the <code>R</code> function <code>curve(..., from = 0, to = 1, n = 10000)</code>). Mindfully discard the first 500 iterations of your Metropolis-Hastings algorithm in order to reach the Markov chain convergence before constructing your Monte Carlo sample. Comment those results, especially in light of the acceptance probabilities computed throughout the algorithm, as well as the different sampled values for <span class="math inline">\(\theta\)</span>.</p></li>
+<li><p>Now imagine we only observe <span class="math inline">\(100\)</span> births, among which <span class="math inline">\(49\)</span> girls, and use a <span class="math inline">\(\text{Beta}(\alpha = 3, \beta=3)\)</span> distribution as <em>prior</em>. Program the corresponding M-H algorithm and study the new results (one can do <span class="math inline">\(10,000\)</span> iterations of this new M-H algorithm for instance, again mindfully discarding the first 500 iterations).</p></li>
+<li><p>Using the data from the historical example and with a <span class="math inline">\(\text{Beta}(\alpha = 3, \beta=3)\)</span> <em>prior</em>, program a random-walk Metropolis-Hastings algorithm (with a Gaussian random step with a standard deviation of <span class="math inline">\(0.02\)</span> for instance). Once again, study the results obtained this way (one can change the size of the random step).</p></li>
+</ol>

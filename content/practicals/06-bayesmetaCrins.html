@@ -1,0 +1,106 @@
+---
+title: "Exercise 6: Bayesian meta-analysis"
+linktitle: "Exercise 6: Bayesian meta-analysis"
+date: "2020-06-25"
+read_date: "2020-06-25"
+menu:
+  practicals:
+    parent: "Practicals"
+    weight: 3
+type: docs
+output:
+  blogdown::html_page:
+    toc: false
+    number_sections: false
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-syllabus-no-bib.csl"
+---
+
+
+
+<p>In 2014, Crins <em>et al.</em><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> published a meta-analysis assessing the incidence of acute rejection (AR) with or without Interleukin-2 receptor antagonists. In this exercise we will recreate this analysis.</p>
+<ol start="0" style="list-style-type: decimal">
+<li><p>Load the <code>R</code> package <code>bayesmeta</code><a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> and the data from Crins <em>et al.</em> (2014) with the <code>R</code> command <code>data("CrinsEtAl2014")</code>.</p>
+<pre class="r"><code>library(bayesmeta)
+data(CrinsEtAl2014)</code></pre></li>
+<li><p>Play around with the companion shiny app at: <a href="http://ams.med.uni-goettingen.de:3838/bayesmeta/app/" class="uri">http://ams.med.uni-goettingen.de:3838/bayesmeta/app/</a>. Explore and comment the results and the outputs, try out different options and <em>priors</em>, etc.</p></li>
+<li><p>Within <code>R</code> now, using the <code>escalc()</code> function from the package <code>metafor</code>, compute the estimated <em>log odds ratios</em> from the 6 considered studies alongside their sampling variances (<strong>ProTip:</strong> read the <em>Measures for Dichotomous Variables</em> section from the help of the <code>escalc()</code> function). Check that those are the same as the one on the online <em>shiny app</em> (<strong>ProTip:</strong> ‘sigma’ is the stantard error, i.e. the square root of the sampling variance <code>vi</code>)</p>
+<pre class="r"><code>library(&quot;metafor&quot;)
+crins.es &lt;- escalc(measure = &quot;OR&quot;, ai = exp.AR.events, n1i = exp.total, ci = cont.AR.events, 
+    n2i = cont.total, slab = publication, data = CrinsEtAl2014)
+crins.es[, c(&quot;publication&quot;, &quot;yi&quot;, &quot;vi&quot;)]</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">publication</th>
+<th align="right">yi</th>
+<th align="right">vi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Heffron (2003)</td>
+<td align="right">-2.3097026</td>
+<td align="right">0.3593718</td>
+</tr>
+<tr class="even">
+<td align="left">Gibelli (2004)</td>
+<td align="right">-0.4595323</td>
+<td align="right">0.3095760</td>
+</tr>
+<tr class="odd">
+<td align="left">Schuller (2005)</td>
+<td align="right">-2.3025851</td>
+<td align="right">0.7750000</td>
+</tr>
+<tr class="even">
+<td align="left">Ganschow (2005)</td>
+<td align="right">-1.7578579</td>
+<td align="right">0.2078161</td>
+</tr>
+<tr class="odd">
+<td align="left">Spada (2006)</td>
+<td align="right">-1.2584610</td>
+<td align="right">0.4121591</td>
+</tr>
+<tr class="even">
+<td align="left">Gras (2008)</td>
+<td align="right">-2.4178959</td>
+<td align="right">2.3372623</td>
+</tr>
+</tbody>
+</table>
+<p>Log-odds ratios are symmetric around zero and have a sampling distributions closer to the normal distibution than the natural OR scale. For this reason, they are usually prefered for meta-analyses. Their sample variance is then computed as the sum of the inverse of all the counts in the <span class="math inline">\(2 \times 2\)</span> associated contingency table<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>.</p></li>
+<li><p>Perform a random-effect meta-analysis of those data using the <code>bayesmeta()</code> function from the <code>R</code> package <code>bayesmeta</code>, within <code>R</code>. Use a uniform <em>prior</em> on <span class="math inline">\([0,4]\)</span> for <span class="math inline">\(\tau\)</span> and a Gaussian <em>prior</em> for <span class="math inline">\(\mu\)</span> centered around <span class="math inline">\(0\)</span> and with a standard deviation of <span class="math inline">\(4\)</span>.</p></li>
+<li><p>Write the corresponding random-effects Bayesian meta-analysis model (using math, not <code>R</code> – yet).</p></li>
+<li><p>Use <code>rjags</code> to estimate the same model, saving the BUGS model written below in a <code>.txt</code> file (called <code>crinsBUGSmodel.txt</code> for instance).</p>
+<pre class="bugs"><code># Random-effects model for Crins et al. 2014 Acute Rejection meta-analysis
+model{
+
+  # Sampling model/likelihood
+  for (i in 1:N){
+    logOR[i] &lt;- theta[i] + epsilon[i]
+    epsilon[i]~dnorm(0, precision.logOR[i])
+    theta[i]~dnorm(mu, precision.tau)
+  }
+
+  # Prior
+  mu~dnorm(0, 0.0625) # 1/16 = 0.0625
+  tau~dunif(0, 4)
+
+  # Reparameterization
+  for(i in 1:N){
+    precision.logOR[i] &lt;- pow(sigma[i], -2)
+  }
+  precision.tau &lt;- pow(tau, -2)
+
+}</code></pre></li>
+</ol>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p><span class="citation">Nicola D Crins et al. “Interleukin-2 Receptor Antagonists for Pediatric Liver Transplant Recipients: A Systematic Review and Meta-Analysis of Controlled Studies,” <em>Pediatric Transplantation</em> 18, no. 8 (2014): 839–850, doi:<a href="https://doi.org/10.1111/petr.12362" role="doc-biblioref">10.1111/petr.12362</a>.</span><a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p><span class="citation">Christian Röver “Bayesian Random-Effects Meta-Analysis Using the Bayesmeta R Package,” <em>arXiv Preprint 1711.08683</em> (2017), <a href="http://www.arxiv.org/abs/1711.08683" role="doc-biblioref">http://www.arxiv.org/abs/1711.08683</a>.</span><a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p><span class="citation">Joseph L. Fleiss and Jesse A. Berlin “Effect Sizes for Dichotomous Data,” in <em>The Handbook of Research Synthesis and Meta-Analysis, 2nd Ed</em> (New York, NY, US: Russell Sage Foundation, 2009), 237–253.</span><a href="#fnref3" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>

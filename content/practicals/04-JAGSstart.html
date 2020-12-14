@@ -1,0 +1,79 @@
+---
+title: "Exercise 4: Introduction to BUGS & JAGS"
+linktitle: "Exercise 4: Introduction to BUGS & JAGS"
+date: "2020-06-18"
+read_date: "2020-06-18"
+menu:
+  practicals:
+    parent: "Practicals"
+    weight: 3
+type: docs
+output:
+  blogdown::html_page:
+    toc: false
+    number_sections: false
+bibliography: "../../static/bib/references.bib"
+---
+
+
+
+<p>The <a href="https://www.mrc-bsu.cam.ac.uk/software/bugs/">BUGS project</a> (<em>Bayesian inference Using Gibbs Sampling</em>) was initiated in 1989 by the MRC (<em>Medical Research Council</em>) Biostatistical Unit at the University of Cambridge (United-Kingdom) to develop a flexible and user-friendly software for Bayesian analysis of complex models through MCMC algorithms. Its most famous and original implementation is <code>WinBUGS</code>, a clicking software available under <em>Windows</em>. <code>OpenBUGS</code> is an alternative implementation of <code>WinBUGS</code> running on either <em>Windows</em>, <em>Mac OS</em> ou <em>Linux</em>. <a href="http://mcmc-jags.sourceforge.net/"><code>JAGS</code></a> (<em>Just another Gibbs Sampler</em>) is a different and newer implementation that also relies on the <code>BUGS</code> language. Finally, the <a href="http://mc-stan.org/"><code>STAN</code></a> software must also be mentionned, recently developed et the Columbia Univeristy, ressemble <code>BUGS</code> through its interface, but relies on innovative MCMC approaches, such as Hamiltonian Monte Carlo, or variational Bayes approaches. A very useful resource is the <a href="http://sourceforge.net/projects/mcmc-jags/files/Manuals/3.x/jags_user_manual.pdf">JAGS user manual</a>.</p>
+<p>To familiarise yourself with <code>JAGS</code> (and its <code>R</code> interface through the package <code>rjags</code>), we will look here at the <em>posterior</em> estimation of the mean and variance of observed data that we will model with a Gaussian distribution.</p>
+<ol start="0" style="list-style-type: decimal">
+<li><p>Start by loading the <code>R</code> package <code>rjags</code>.</p>
+<pre class="r"><code>library(rjags)</code></pre></li>
+</ol>
+<p>A <code>BUGS</code> model has 3 components:</p>
+<ul>
+<li><em>the model</em>: specified in an external text file (<code>.txt</code>) according to a specific <code>BUGS</code> syntax</li>
+<li><em>the data</em>: a list containing each observation under a name matching the one used in the model specification</li>
+<li><em>the initial values</em>: (optional) a list containing the initial values for the various parameters to be estimated</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li><p>Sample <span class="math inline">\(N=50\)</span> observations from a Gaussian distribution with mean <span class="math inline">\(m = 2\)</span> and standard deviation <span class="math inline">\(s = 3\)</span> using the <code>R</code> function <code>rnorm</code> and store it into an object called <code>obs</code>.</p>
+<pre class="r"><code>N &lt;- 50  # the number of observations
+obs &lt;- rnorm(n = N, mean = 2, sd = 3)  # the (fake) observed data</code></pre></li>
+<li><p>Read the help of the <code>rjags</code> package, then save a text file (<code>.txt</code>) the following code defining the <code>BUGS</code> model:</p>
+<pre class="bugs"><code># Model
+model{
+
+  # Likelihood
+  for (i in 1:N){ 
+    obs[i]~dnorm(mu,tau)
+  }
+
+  # Prior
+  mu~dnorm(0,0.0001) # proper but very flat (so weakly informative)
+  tau~dgamma(0.0001,0.0001) # proper, and weakly informative (conjugate for Gaussian)
+
+  # Variables of interest
+  sigma &lt;- pow(tau, -0.5)
+}</code></pre></li>
+</ol>
+<p>Each model specification file must start with the instruction <code>model{</code> indicating <code>JAGS</code> it is about to recieve a model specification. Then the model must be set up, usually by cycling along the data with a <code>for</code> loop. Here, we want to declare <code>N</code> observations, and each of them <code>obs[i]</code> follows a Gaussian distribution (characterized with the command <code>dnorm</code>) of mean <code>mu</code> and precision <code>tau</code>.<br />
+<strong><em>Warning</em></strong>: in <code>BUGS</code>, the Gaussian distribution is parameterized by its <strong>precision</strong>, which is simply the inverse of the variance (<span class="math inline">\(\tau = 1/\sigma^2\)</span>). Then, one needs to define the <em>prior</em> distribution for each parameter -– here both <code>mu</code> and <code>tau</code>. For <code>mu</code>, we use a Gaussian <em>prior</em> with mean <span class="math inline">\(0\)</span> and precision <span class="math inline">\(10^{-4}\)</span> (thus variance <span class="math inline">\(10,000\)</span>: this corresponds to a weakly informative <em>prior</em> quite spread out given the scale of our data. For <code>tau</code> we use the conjugate <em>prior</em> for precision in a Gaussian model, namely the Gamma distribution (with very small parameters, here again to remain the least informative possible). Finally, we give a deterministic definition of the additional parameters of interest, here the standard deviation <code>sigma</code>.<br />
+<strong>NB</strong>: <code>~</code> indicates probabilistic distribution definition of a random variable, while <code>&lt;-</code> indicates a deterministic calculus definition.</p>
+<ol start="3" style="list-style-type: decimal">
+<li><p>With the <code>R</code> function <code>jags.model()</code>, create a <code>jags</code> object <code>R</code>.</p>
+<pre class="r"><code>myfirstjags &lt;- jags.model(&quot;normalBUGSmodel.txt&quot;, data = list(obs = obs, N = length(obs)))</code></pre>
+<pre><code>## Compiling model graph
+##    Resolving undeclared variables
+##    Allocating nodes
+## Graph information:
+##    Observed stochastic nodes: 50
+##    Unobserved stochastic nodes: 2
+##    Total graph size: 58
+## 
+## Initializing model</code></pre></li>
+<li><p>With the <code>R</code> function <code>coda.samples()</code>, generate a sample of size <span class="math inline">\(2,000\)</span> from the <em>posterior</em> distributions for the mean and standard deviation parameters.</p>
+<pre class="r"><code>res &lt;- coda.samples(model = myfirstjags, variable.names = c(&quot;mu&quot;, &quot;sigma&quot;), n.iter = 2000)</code></pre></li>
+<li><p>Study the output of the <code>coda.samples()</code> <code>R</code> function, and compute both the <em>posterior</em> mean and median estimates for <code>mu</code> and <code>sigma</code>. Give a credibility interval at 95% for both.</p></li>
+<li><p>Load the <code>coda</code> <code>R</code> package. This package functions for convergence diagnostic and analysis of MCMC algorithm outputs.</p>
+<pre class="r"><code>library(coda)</code></pre></li>
+<li><p>To diagnose the convergence of an MCMC algorithm, it is necessary to generate different Markov chains, with different initial values. Recreate a new <code>jags</code> object in <code>R</code> and specify 3 the use of 3 Markov chains with the argument <code>n.chains</code>, and initialize <code>mu</code> and <code>tau</code> at <span class="math inline">\(0, -10, 100\)</span> and at <span class="math inline">\(1, 0.01, 0.1\)</span> respectively with the argument <code>inits</code> (<strong>ProTip:</strong> use a <code>list</code> of <code>list</code>, one for each chain).</p></li>
+<li><p>With the <code>R</code> function <code>gelman.plot()</code>, plot the Gelman-Rubin statistic.</p></li>
+<li><p>With the <code>R</code> functions <code>autocorr.plot()</code> and <code>acfplot()</code> evaluate the autocorrélation of the studied parameters.</p></li>
+<li><p>With the <code>R</code> function <code>cumuplot()</code> evaluate the running quantiles of the studied parameters. How can you interpret them ?</p></li>
+<li><p>With the <code>R</code> function <code>crosscorr.plot()</code> evaluate the correlations between the studied parameters. How can you interpret them ?</p></li>
+<li><p>With the function <code>hdi()</code> from the <code>R</code> package <code>HDInterval</code>, provide highest densitity <em>posterior</em> credibility intervals at 95%, and compare them to those obtained with the <span class="math inline">\(2.5\)</span>% and <span class="math inline">\(97.5\)</span>% quantiles.</p></li>
+</ol>

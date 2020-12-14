@@ -1,0 +1,58 @@
+---
+title: "Exercise 5: Post-mortem analysis of an under-powered randomized trial"
+linktitle: "Exercise 5: Post-mortem analysis of an under-powered randomized trial"
+date: "2020-06-25"
+read_date: "2020-06-25"
+menu:
+  practicals:
+    parent: "Practicals"
+    weight: 3
+type: docs
+output:
+  blogdown::html_page:
+    toc: false
+    number_sections: false
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-syllabus-no-bib.csl"
+---
+
+
+
+<p>The randomized clinical trial <em>EOLIA</em><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> evaluated a new treatment for severe acute respiratory distress syndrome (severe ARDS) by comparing the mortality rate after 60 days among 249 patients randomized between a control group (receiving conventional treatment, i.e. mechanical ventilation) and a treatment group receiving extracorporeal membrane oxygenation (ECMO) — the new treatment studied. A frequentist analysis of the data concluded to a Relative Risk of death of <span class="math inline">\(0.76\)</span> in the ECMO group compared to controls (in Intention to Treat), with <span class="math inline">\(CI_{95\%} = [0.55 , 1.04]\)</span> and the associated p-value of <span class="math inline">\(0.09\)</span>.</p>
+<p>Goligher <em>et al.</em> (2019)<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> performed a Bayesian re-analysis of these data, further exploring the evidence and how it can be quantified and summarized with a Bayesian approach.</p>
+<table>
+<caption>Observed data from the <em>EOLIA</em> trial</caption>
+<thead>
+<tr class="header">
+<th></th>
+<th>Control</th>
+<th>ECMO</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong><span class="math inline">\(n\)</span> observed</strong></td>
+<td>125</td>
+<td>124</td>
+</tr>
+<tr class="even">
+<td><strong>number of deceased at 60 days</strong></td>
+<td>57</td>
+<td>44</td>
+</tr>
+</tbody>
+</table>
+<ol style="list-style-type: decimal">
+<li><p>Write the Bayesian model used by Goligher <em>et al.</em> (2019).</p></li>
+<li><p>Write the corresponding BUGS model, and save it into a <code>.txt</code> file (for instance called <code>goligherBUGSmodel.txt</code>)</p></li>
+<li><p>First create two binary data vectors <code>ycontrol</code> and <code>yecmo</code>, that are either <code>1</code> or <code>0</code>, to encode the observations from the data table above. Then uses the <code>jags.model()</code> and <code>coda.samples()</code> to replicate the estimation from Goligher <em>et al.</em> (2019) (<strong>ProTip:</strong> use the function <code>window()</code> to remove the burn-in observation from the output of the <code>coda.samples</code> function.)</p></li>
+<li><p>Check the convergence, and then comment the estimate results (<strong>ProTip:</strong> look at the effective sample size with the <code>effectiveSize()</code> <code>R</code> function).</p></li>
+<li><p>Change to a more informative <em>prior</em> using a Gaussian distribution for the log(RR), centered on log(0.78) and with a standard deviation of 0.15 in the log(RR) scale (i.e. a precision of <span class="math inline">\(\approx 45\)</span>). Comment the results. Try out other <em>prior</em> distributions.</p></li>
+</ol>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p><span class="citation">Alain Combes et al. “Extracorporeal Membrane Oxygenation for Severe Acute Respiratory Distress Syndrome,” <em>New England Journal of Medicine</em> 378, no. 21 (2018): 1965–1975, doi:<a href="https://doi.org/10.1056/NEJMoa1800385" role="doc-biblioref">10.1056/NEJMoa1800385</a>.</span><a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p><span class="citation">Ewan C. Goligher et al. “Extracorporeal Membrane Oxygenation for Severe Acute Respiratory Distress Syndrome and Posterior Probability of Mortality Benefit in a Post Hoc Bayesian Analysis of a Randomized Clinical Trial,” <em>JAMA</em> 320, no. 21 (2018): 2251, doi:<a href="https://doi.org/10.1001/jama.2018.14276" role="doc-biblioref">10.1001/jama.2018.14276</a>.</span><a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>

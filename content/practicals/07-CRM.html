@@ -1,0 +1,38 @@
+---
+title: "Exercise 7: how NOT to report a CRM trial"
+linktitle: "Exercise 7: how NOT to report a CRM trial"
+date: "2020-06-25"
+read_date: "2020-06-25"
+menu:
+  practicals:
+    parent: "Practicals"
+    weight: 3
+type: docs
+output:
+  blogdown::html_page:
+    toc: false
+    number_sections: false
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-syllabus-no-bib.csl"
+---
+
+
+
+<p>In this exercise, we will first do a critical reading of the article from Kaguelidou <em>et al.</em> (2016).<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<ol style="list-style-type: decimal">
+<li><p>List the method elements that are missing from this article.</p></li>
+<li><p>Read and discuss Table 3.</p></li>
+<li><p>Load the <code>R</code> package <code>bcrm</code> and conduct an imaginary CRM trial interactive with the following code lines:</p>
+<pre class="r"><code>library(bcrm)
+sdose &lt;- c(1, 1.5, 2, 2.5, 3)
+dose.label &lt;- c(5, 10, 15, 25, 40, 50, 60)
+p.tox0 &lt;- c(0.01, 0.015, 0.02, 0.025, 0.03, 0.04, 0.05)
+bcrm(stop = list(nmax = 42), p.tox0 = p.tox0, dose = dose.label, ff = &quot;power&quot;, prior.alpha = list(1, 
+    1, 1), target.tox = 0.3, start = 1)</code></pre></li>
+</ol>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p><span class="citation">Florentia Kaguelidou et al. “Dose-Finding Study of Omeprazole on Gastric pH in Neonates with Gastro-Esophageal Acid Reflux Using a Bayesian Sequential Approach,” ed. Imti Choonara, <em>PLOS ONE</em> 11, no. 12 (2016): e0166207, doi:<a href="https://doi.org/10.1371/journal.pone.0166207" role="doc-biblioref">10.1371/journal.pone.0166207</a>.</span><a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
